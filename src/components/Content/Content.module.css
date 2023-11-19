@@ -1,0 +1,55 @@
+.contentBlock{
+    margin-left: 100px;
+    color: white;
+    background-color: #040404;
+}
+.videoPlayer{
+    height: 60vh;
+}
+.featuredBlock{
+    width: 100%;
+    padding: 150px 15px 15px 15px;
+    min-height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 5% ,left;
+}
+.movie{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #88898B;
+    font-size: 24px;
+}
+.info{
+    display: flex;
+    gap: 15px;
+    font-size: 24px;
+}
+.description{
+    margin-top: 15px;
+    width: 40%;
+    font-size: 24px;
+}
+.controls{
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+/* TrendingNow */
+.trendingBlock h2{
+    letter-spacing: 5px;
+    padding: 10px 0;
+    font-size: 22px;
+
+}
+.carousel{
+    min-height: 35vh;
+    display: flex;
+    overflow: hidden;
+}
+.movie{
+    flex-basis: 12%;
+    position: relative;
+}
