@@ -17,7 +17,7 @@ export const sortTrendingMovies = (movies, id) => {
             return movie.Id === id
 
         })
-        let start = movies.slice(index,movies.length -1)
+        let start = movies.slice(index,movies.length )
         let end = movies.slice(0,index)
         let sortedMovies = [...start,...end]
         return sortedMovies.slice(0,50)
