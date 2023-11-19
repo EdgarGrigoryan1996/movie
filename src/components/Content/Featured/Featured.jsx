@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import s from "@/components/Content/Content.module.css";
 import Image from "next/image";
@@ -12,7 +13,8 @@ import {getMovieDuration} from "@/utils/helpFunctions/helpFunctions";
 const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
 
 function Featured(props) {
-    const duration = getMovieDuration(props.featuredMovie["Duration"])
+    const duration = getMovieDuration(props?.featuredMovie["Duration"])
+    console.log(duration)
     return (
         <div className={s.featuredBlockWrapper}>
             {props.videoPlayStatus ?

@@ -3,16 +3,15 @@ import React, {useEffect, useState} from 'react';
 import s from "./Content.module.css"
 import movies from "../../data/data.json"
 import {sortTrendingMovies} from "@/utils/helpFunctions/helpFunctions";
-
-
 import Trending from "@/components/Content/Trending/Trending";
 import Featured from "@/components/Content/Featured/Featured";
 
-
-
 function Content() {
-
-    const [featuredMovie, setFeaturedMovie] =  useState(localStorage.getItem("movie") ? JSON.parse(localStorage.getItem("movie"))  : movies["Featured"])
+    let storage
+    if(typeof window !== "undefined"){
+        storage = localStorage.getItem("movie") ? JSON.parse(localStorage.getItem("movie"))  : movies["Featured"]
+    }
+    const [featuredMovie, setFeaturedMovie] =  useState(storage)
     const [trendingMovies,setTrendingMovies] = useState(null)
     const [videoPlayStatus, setVideoPlayStatus] = useState(false)
     const [isFirstRender, setIsFirstRender] = useState(true)
